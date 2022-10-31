@@ -22,3 +22,11 @@ unique_table <- function(data){
   sapply(data, function(x) unique(x[!is.na(x)] %>% sort())) %>%
     list_to_df() %>% t() %>% dplyr::as_tibble() %>% View("Unique Table")
 }
+
+
+### ANOTHER OPTION (more concise and uses less resources)
+# source: https://stackoverflow.com/questions/57191886/show-unique-values-for-each-column
+map(df, ~str_c(unique(.x),collapse = ",")) %>% 
+    bind_rows() %>% 
+    gather(key = col_name, value = col_unique) #%>% print(n = Inf) #or use: view()
+    
