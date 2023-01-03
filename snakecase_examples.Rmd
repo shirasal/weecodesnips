@@ -1,0 +1,62 @@
+---
+title: "all snakecase examples"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Reference to all the cases available under package ['snakecase'](https://github.com/Tazinho/snakecase)
+
+# Lower camel case
+```{r}
+snakecase::to_lower_camel_case("this is a string")
+
+```
+
+# Upper camel case
+```{r}
+snakecase::to_upper_camel_case("this is a string")
+```
+
+# Mixed case
+```{r}
+snakecase::to_mixed_case("this is a string")
+```
+
+# Screaming snake case
+```{r}
+snakecase::to_screaming_snake_case("this is a string")
+```
+
+# Sentence case
+```{r}
+snakecase::to_sentence_case("this is a string")
+```
+
+# Snake case
+```{r}
+snakecase::to_snake_case("this is a string")
+```
+
+# Swap case
+```{r}
+snakecase::to_swap_case("this is a string")
+```
+
+# Title case
+```{r}
+snakecase::to_title_case("this is a string")
+```
+
+# Lower upper case
+```{r}
+snakecase::to_lower_upper_case("this is a string")
+```
+
+# Upper lower case
+```{r}
+snakecase::to_upper_lower_case("this is a string")
+```
